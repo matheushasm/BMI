@@ -1,0 +1,137 @@
+*{ box-sizing: border-box}
+
+body{ font-family: Arial} 
+.main{
+    padding-bottom: 50px;
+}
+
+.headerContainer{
+    max-width: 900px;
+    margin: 40px auto;
+}
+.headerLogo{
+    width: 80px;
+    height: 40px;
+    background-color: #227c9d;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+}
+.container{
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+}
+.container .leftSide{
+    flex: 1;
+    margin-right: 40px;
+}
+.container .leftSide h1 {
+    font-size: 40px;
+    color: #3a4b5c;
+}
+.container .leftSide p{
+    font-size: 16px;
+    color: #6a7d8b;
+    margin-bottom: 40px;
+}
+.container .leftSide input{
+    width: 100%;
+    margin-bottom: 20px;
+    border: 0;
+    border-bottom: 2px solid rgba(150, 163, 171, .5);
+    padding: 10px 2px;
+    font-size: 16px;
+    outline: 0;
+}
+.container .leftSide input:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+.container .leftSide button{
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #227c9d;
+    border: 0;
+    border-radius: 5px;
+    transition: all ease .5s;
+    cursor: pointer;
+}
+.container .leftSide button:hover{
+    opacity: 0.8;
+}
+.container .leftSide button:disabled{
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+
+
+.container .rightSide{
+    flex: 1;
+    margin-left: 40px;
+    display: flex;
+}
+.container .rightSide .grid{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.container .rightSide .rightBig{
+    flex:1;
+    display: flex;
+}
+.container .rightSide .rightBig .leftArrow{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #227c9d;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-left: -35px;
+    margin-top: 145px;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+.container .rightSide .rightBig .leftArrow:hover{
+    opacity: 0.8;
+}
+
+@media(max-width: 915px) {
+    header{
+        padding: 0px 20px;
+    }
+    .container{
+        padding: 0px 20px;
+    }
+}
+@media(max-width: 770px) {
+    .container{
+        flex-direction: column;
+    }
+    .container .lefSide{
+        margin-right: 0px;
+    }
+    .container .rightSide{
+        margin-left: 0px;
+        margin-top: 50px;
+    }
+    .container .rightSide .rightBig .leftArrow{
+        margin-left: 0px;
+        margin-top: 0px;
+        border-radius: 10px;
+    }
+}
+@media(max-width: 440px){
+    .container .rightSide .grid{
+        grid-template-columns: repeat(1, 1fr)
+    }
+}
